@@ -1,0 +1,5 @@
+Theme name:    Flogiston
+Description:   Theme for Rozvědčík.cz.
+Author name:   Severák
+Author site:   http://svita.cz
+License:       MIT
