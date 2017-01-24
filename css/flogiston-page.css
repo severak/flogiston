@@ -1,0 +1,14 @@
+/*
+ zde layout
+*/
+
+.flogiston-page {
+    max-width: 40em;
+    /* 1em nahoře dole a vycentrováno */
+    margin: 1em auto;
+}
+
+/* odsazení zarovnatelné s článkem */
+.flogiston-padding {
+    padding: 1em 2em;
+}

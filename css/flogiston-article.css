@@ -1,0 +1,80 @@
+/*
+ zde typografie
+*/
+
+.flogiston-article {
+    padding: 0 2em;
+}
+
+.flogiston-article p {
+    margin: 0;
+    line-height: 1.6;
+}
+.flogiston-article p + p {
+    text-indent: 1em;
+    margin-top: 0.8em;
+}
+
+.flogiston-article ul {
+    list-style-position: outside;
+    -webkit-padding-start: 0;
+}
+
+.flogiston-article ul ul,
+.flogiston-article ol ul  {
+    padding-left: 2em;
+}
+
+.flogiston-article img {
+    max-width: 100%;
+}
+
+.flogiston-article hr {
+    border: 1px solid;
+}
+
+.flogiston-article blockquote {
+    border-left: 3px solid;
+    -webkit-margin-start: 0;
+    padding-left: 1em;
+}
+
+.flogiston-article table
+{
+    border-collapse: collapse;
+    border-spacing: 0; /* IE 6 */
+
+    border-top:    2px solid; /* The caption on top will not have a bottom-border */
+    border-bottom: 2px solid;
+
+    /* Center */
+    margin-left:  auto;
+    margin-right: auto;
+}
+
+.flogiston-article td,
+.flogiston-article th /* Table cells and table header cells */
+{
+    vertical-align: top; /* Word */
+    vertical-align: baseline; /* Others */
+    padding-left:   0.5em;
+    padding-right:  0.5em;
+    padding-top:    0.2em;
+    padding-bottom: 0.2em;
+
+    border: 1px solid;
+}
+
+.flogiston-article th /* Table header cells */
+{
+    font-weight: bold;
+}
+
+.flogiston-article pre,
+.flogiston-article p code {
+    border: 1px solid;
+}
+
+.flogiston-article pre {
+    padding: 0.5em;
+}

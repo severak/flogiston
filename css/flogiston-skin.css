@@ -1,0 +1,68 @@
+/*
+ zde barvy, písma a jiné elementy vzhledu
+*/
+
+a {
+    color: #268bd2;
+    font-weight: bold;
+}
+
+a img  {
+    border: 2px dashed #268bd2;
+}
+
+.flogiston-page {
+    background: rgba(253, 246, 227, 0.85);
+    *background-color: #fdf6e3; /* IE neumí průhlednost */
+}
+
+.flogiston-background {
+    background: url("houba.jpg") no-repeat fixed center/cover;
+}
+
+.flogiston-inverted {
+    background-color: #002b36;
+    color: #fdf6e3;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Cyklop, Impact, serif;
+}
+
+/* todo: vytunit nadpisy */
+h1 {font-size: 1.602em;}
+h2 {font-size: 1.602em;}
+h3 {font-size: 1.424em;}
+h4 {font-size: 1.266em;}
+h5 {font-size: 1.125em;}
+h6 {font-size: 1em;}
+
+.flogiston-article h1 a {
+    color: #002b36;
+    text-decoration: none;
+}
+
+.flogiston-inverted h1 a {
+    text-decoration: none;
+}
+
+.flogiston-article hr {
+    border: 1px dashed #dc322f;
+}
+
+.flogiston-article pre, .flogiston-article code {
+    background-color: #eee8d5;
+}
+
+/*
+ TODO:
+ - fix paddingů (border box?)
+ - grid z pure
+ - tiskový styl
+ - js zoom
+ - buildovátko
+ */
