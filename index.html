@@ -49,6 +49,189 @@
 
 	
 	</article>
+
+	<article>
+		<h1 id="headers">Headers</h1>
+		<p>Above this, we have the title, author (or subtitle) and date Pandoc metadata. These are specially classed H1, H2 and H3 elements that we just add centering to.</p>
+		<h2 id="level-2">Level 2</h2>
+		<p>With Pandoc's <code>--section-divs</code> option, nested header levels create nested DIVs. This stylesheet creates nested indentation for them to nest visually.</p>
+		<h3 id="level-3">Level 3</h3>
+		<p>I should create some auxiliary CSS files that you could include after <code>buttondown.css</code> to change some things like turning off nested indenting.</p>
+		<h4 id="level-4">Level 4</h4>
+		<p>Buttondown doesn't re-define the font size or weight of the headers, but it does define the font families for them as sans- serf.</p>
+		<h5 id="level-5">Level 5</h5>
+		<p>It doesn't re-define the body text font, and it doesn't make the text body narrow --- it leaves it full width. I will probably add a style option file for that.</p>
+		<h6 id="level-6">Level 6</h6>
+		<p>Level 6 can be quite small.</p>
+		<h1 id="lists">Lists</h1>
+		<h2 id="unordered-lists">Unordered lists</h2>
+		<h3 id="a-simple-list">A simple list:</h3>
+		<p>Text before</p>
+		<ul>
+			<li>Alpha</li>
+			<li>Beta</li>
+			<li>Gamma</li>
+		</ul>
+		<p>Text after</p>
+		<h3 id="a-nested-list">A nested list:</h3>
+		<ul>
+			<li>Alpha
+				<ul>
+					<li>Apple</li>
+					<li>Orange</li>
+				</ul></li>
+			<li>Beta
+				<ul>
+					<li>A multi-line item to show<br />
+						where the wrapping and sublist line up.
+						<ul>
+							<li>Earth</li>
+							<li>Moon</li>
+						</ul></li>
+					<li>Pineapple</li>
+				</ul></li>
+			<li>Gamma (with numbered sublist)
+				<ol style="list-style-type: decimal">
+					<li>One</li>
+					<li>Two</li>
+				</ol></li>
+		</ul>
+		<h3 id="a-paragraph-spaced-one">A paragraph spaced one:</h3>
+		<p>Not all stylesheets make these have more spacing.</p>
+		<ul>
+			<li><p>Alpha</p></li>
+			<li><p>Beta</p></li>
+			<li><p>Gamma</p></li>
+		</ul>
+		<p>And the spacing after might be too tight.</p>
+		<h2 id="ordered-lists">Ordered lists</h2>
+		<h3 id="a-simple-one">A simple one:</h3>
+		<ol style="list-style-type: decimal">
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+		</ol>
+		<h3 id="a-nested-one">A nested one:</h3>
+		<ol style="list-style-type: decimal">
+			<li>One
+				<ol style="list-style-type: decimal">
+					<li>Alpha</li>
+					<li>Beta</li>
+				</ol></li>
+			<li>Two (with unordered sublist)
+				<ul>
+					<li>Gamma</li>
+					<li>Delta</li>
+				</ul></li>
+			<li>Three
+				<ol style="list-style-type: decimal">
+					<li>Apple
+						<ol style="list-style-type: decimal">
+							<li>Circle</li>
+							<li>Triangle
+								<ol style="list-style-type: decimal">
+									<li>North
+										<ol style="list-style-type: decimal">
+											<li>East</li>
+											<li>West</li>
+										</ol></li>
+									<li>South
+										<ul>
+											<li>Up</li>
+											<li>Down</li>
+										</ul></li>
+								</ol></li>
+							<li>Square</li>
+						</ol></li>
+					<li>Orange</li>
+				</ol></li>
+		</ol>
+		<h1 id="block-quotes">Block Quotes</h1>
+		<p>We simply italicize them and don't do any fancy quote bar or decoration since they are already indented on the left and right.</p>
+		<blockquote>
+			<p>We simply italicize them and don't do any fancy quote bar or decoration since they are already indented on the left and right.</p>
+		</blockquote>
+		<h1 id="code">Code</h1>
+		<p>Code blocks are styled more to be set apart a bit more than just the monospaced font. A light background color and border (in case the background doesn't print, but it looks nice too).</p>
+		<pre><code>x = e * 10 / 2;
+y = p - 7;</code></pre>
+		<p>On screen, the blocks provide scroll boxes and the <code>inline code spans</code> word wrap. For print, the code blocks also change to word wrap. On screen, the <code>code spans</code> also get a little border, but lose it in print.</p>
+		<h1 id="links">Links</h1>
+		<p>Remove the underline except on hover. When printing, remove all styling and print external URLs after the link text to be useful in a printout. There is no filter to not print very long URLs though.</p>
+		<p>A link to <a href="http://www.google.com">Google</a>. A simple link to <a href="http://wikipedia.org" class="uri">http://wikipedia.org</a>.</p>
+		<p>I haven't figured out how to not redundantly print the URL after a simple link whose link text is the URL.</p>
+		<h1 id="horizontal-rule">Horizontal rule</h1>
+		<p>A thin line that doesn't have that shadow thing that looks terrible, especially in print.</p>
+		<hr />
+		<p>See the end for what footnotes looks like<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
+		<h1 id="images">Images</h1>
+		<p>An inline image <img src="http://www.jodypaul.com/gr/altair8800Thumb.gif" title="www.jodypaul.com" />.</p>
+		<p>A Pandoc figure style image with caption:</p>
+		<div class="figure">
+			<img src="http://daringfireball.net/graphics/logos/" title="Daring Fireball!" alt="Daring Fireball" />
+			<p class="caption">Daring Fireball</p>
+		</div>
+		<h1 id="definition-lists">Definition Lists</h1>
+		<p>Still may tweak this. Trying to use subtle lines to help group it, but it feels a bit too table-like. However, without them, it doesn't seem to stand out much.</p>
+		<dl>
+			<dt>Term</dt>
+			<dd><p>Definition of the term</p>
+			</dd>
+			<dt>Term2</dt>
+			<dd><p>First definition of Term2 It can be a long, wrapped paragraph like this.</p>
+				<p>A definition can include multiple paragraphs if they are indented the same in Pandoc and MultiMarkdown 3. MultiMarkdown 2 doesn't support this, so it will be interpreted there as a code block following the Term2 definition.</p>
+				<ul>
+					<li>They can also include Markdown</li>
+					<li>If it supports multiple paragraphs, a definition can contain lists and things</li>
+					<li>But the first has to start as a regular paragraph</li>
+				</ul>
+			</dd>
+			<dt>Term3</dt>
+			<dd><p>A term can have multiple definitions.</p>
+			</dd>
+			<dd><p>The second definition of Term3. Depending on the stylesheet for HTML you are using or the output format (LaTeX, etc.), this second definition may appear styled as a separate term but without the term itself.</p>
+			</dd>
+		</dl>
+		<h1 id="tables">Tables</h1>
+		<p>These get more styling than most things, yet it's still very little compared to most table stylings, but way better than an un-styled HTML table. It's to emulate a simple textbook style, but we throw in a hover row highlight to be a little useful on-screen when scrubbing around the table.</p>
+		<table>
+			<caption>Demonstration of simple table syntax.</caption>
+			<thead>
+			<tr class="header">
+				<th align="right">Right</th>
+				<th align="left">Left</th>
+				<th align="center">Center</th>
+				<th>Default</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr class="odd">
+				<td align="right">12</td>
+				<td align="left">12</td>
+				<td align="center">12</td>
+				<td>12</td>
+			</tr>
+			<tr class="even">
+				<td align="right">123</td>
+				<td align="left">123</td>
+				<td align="center">123</td>
+				<td>123</td>
+			</tr>
+			<tr class="odd">
+				<td align="right">1</td>
+				<td align="left">1</td>
+				<td align="center">1</td>
+				<td>1</td>
+			</tr>
+			</tbody>
+		</table>
+		<div class="footnotes">
+			<hr />
+			<ol>
+				<li id="fn1"><p>A double-line rule with the word &quot;NOTES&quot; in the center.<a href="#fnref1">↩</a></p></li>
+			</ol>
+		</div>
+	</article>
 	
 	<hr>
 	
