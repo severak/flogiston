@@ -3,7 +3,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title><?php echo page_title('Page can’t be found'); ?> - <?php echo site_name(); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="<?php echo theme_url('/css/flogiston.css'); ?>">
+	<link rel="stylesheet" href="<?php echo theme_url('/css/flogiston.min.css'); ?>">
 	<meta property="og:title" content="<?php echo site_name(); ?>" />
 	<meta property="og:image" content="<?php echo theme_url('/css/rozvedcik.jpg'); ?>" />
 	<meta property="og:type" content="website" />
