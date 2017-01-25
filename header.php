@@ -12,16 +12,21 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body class="flogiston-background">
+<div class="flogiston-page">
 	<?php if(has_menu_items()): ?>
-	<nav class="nav paperlike">
+	<nav>
+		<div class="flogiston-nav flogiston-padding">
 		<?php while(menu_items()): ?>
 		<a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>" <?php echo (menu_active() ? 'class="active"' : ''); ?>><?php echo menu_name(); ?></a>
 		<?php endwhile; ?>
+		</div>
 	</nav>
 	<?php endif; ?>
-	<header class="header paperlike">
-	<h1><a href="<?php echo base_url(); ?>"><?php echo site_name(); ?></a></h1>
-	<em><?php echo site_description(); ?></em>
+	<header>
+		<div class="flogiston-header flogiston-inverted flogiston-padding">
+		<h1><a href="<?php echo base_url(); ?>"><?php echo site_name(); ?></a></h1>
+		<em><?php echo site_description(); ?></em>
+		</div>
 	</header>
-	<div class="paper">
+	<div class="flogiston-content">

@@ -1,5 +1,6 @@
 <?php theme_include('header'); ?>
-<article class="article">
+<article>
+<div class="flogiston-article">
 
 <h1>
 <a href="<?php echo page_url(); ?>" title="<?php echo page_title(); ?>">
@@ -8,6 +9,6 @@
 </h1>
 
 <?php echo page_content(); ?>
-
+</div>
 </article>
 <?php theme_include('footer'); ?>

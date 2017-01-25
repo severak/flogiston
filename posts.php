@@ -3,7 +3,8 @@
 
 <?php if(has_posts()): ?>
 	<?php while(posts()): ?>
-	<article class="article">
+	<article>
+	<div class="flogiston-article">
 	<h1>
 		<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
 	</h1>
@@ -11,8 +12,8 @@
 	<?php echo article_description(); ?>
 	
 	<p><a href="<?php echo article_url(); ?>">celý článek »</a></p>
-	
-	<hr>
+	</div>
+	<hr class="flogiston-article-separator">
 	
 	<?php endwhile;?>
 	

@@ -1,6 +1,6 @@
-<!-- <hr>
-<p>Reklama: </p>
-<endora/> -->
+<hr>
+<endora/>
+</div>
 </div>
 
 </body>
