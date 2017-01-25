@@ -30,13 +30,32 @@
 }
 
 .flogiston-article hr {
-    border: 1px solid;
+    border: 0;
+    border-bottom: 3px dotted;
 }
 
 .flogiston-article blockquote {
     border-left: 3px solid;
     -webkit-margin-start: 0;
     padding-left: 1em;
+}
+
+.flogiston-article dt {
+    font-weight: bold;
+}
+
+.flogiston-article pre,
+.flogiston-article p code {
+    border: 1px solid;
+}
+
+.flogiston-article pre {
+    padding: 0.5em;
+}
+
+.flogiston-article p code {
+    padding: 0.1em;
+    white-space: nowrap;
 }
 
 /* tables stolen from buttondown */
@@ -46,16 +65,19 @@
     border-collapse: collapse;
     border-spacing: 0; /* IE 6 */
 
-    border-top:    2px solid; /* The caption on top will not have a bottom-border */
-    border-bottom: 2px solid;
+    border-top:    3px double; /* The caption on top will not have a bottom-border */
+    border-bottom: 3px double;
 
     /* Center */
     margin-left:  auto;
     margin-right: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .flogiston-article td,
-.flogiston-article th /* Table cells and table header cells */
+.flogiston-article th, /* Table cells and table header cells */
+.flogiston-article caption
 {
     vertical-align: top; /* Word */
     vertical-align: baseline; /* Others */
@@ -72,11 +94,3 @@
     font-weight: bold;
 }
 
-.flogiston-article pre,
-.flogiston-article p code {
-    border: 1px solid;
-}
-
-.flogiston-article pre {
-    padding: 0.5em;
-}

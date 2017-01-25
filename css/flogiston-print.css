@@ -63,6 +63,15 @@ img,tr {page-break-inside: avoid;}
 #header, #footer, #navigation, #rightSideBar, #leftSideBar
 {display:none;}*/
 
+hr, table, th, td, blockquote, code, pre { border-color: #000 !important;}
+
+hr {
+    border: 0 !important;
+    border-bottom: 3px double !important;
+}
+
 .flogiston-header, .flogiston-footer, .flogiston-nav { display: none; }
 
+
+/* /print */
 }

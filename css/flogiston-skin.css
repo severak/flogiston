@@ -8,7 +8,7 @@ a {
 }
 
 a img  {
-    border: 2px dashed #268bd2;
+    border: 2px dotted #268bd2;
 }
 
 .flogiston-page {
@@ -56,11 +56,29 @@ h6 {font-size: 1em;}
 }
 
 .flogiston-article hr {
-    border: 1px dashed #dc322f;
+    border-color: #93a1a1;
 }
 
 .flogiston-article pre, .flogiston-article code {
     background-color: #eee8d5;
+}
+
+.flogiston-article-separator {
+    border: none;
+    border-top: 8px dotted #93a1a1;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.flogiston-article table,
+.flogiston-article th,
+.flogiston-article td,
+.flogiston-article caption,
+.flogiston-article blockquote,
+.flogiston-article pre,
+.flogiston-article p code
+{
+    border-color: #2aa198;
 }
 
 /*
