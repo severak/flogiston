@@ -63,6 +63,6 @@ img,tr {page-break-inside: avoid;}
 #header, #footer, #navigation, #rightSideBar, #leftSideBar
 {display:none;}*/
 
-.flogiston-header, .flogiston-footer { display: none; }
+.flogiston-header, .flogiston-footer, .flogiston-nav { display: none; }
 
 }
