@@ -1,6 +1,6 @@
 <?php
 // builds minified CSS
-$usedModules = ['normalize', 'flogiston-article', 'font-cyklop', 'flogiston-skin', 'flogiston-print'];
+$usedModules = ['normalize', 'flogiston-page', 'flogiston-article', 'font-cyklop', 'flogiston-skin', 'flogiston-print'];
 $signature = 'FLOGISTON - an Anchor CMS theme (see https://github.com/severak/flogiston)';
 
 if (php_sapi_name()!='cli')
