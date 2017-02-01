@@ -40,6 +40,10 @@
     padding-left: 1em;
 }
 
+.flogiston-article blockquote ul {
+    list-style-position: inside;
+}
+
 .flogiston-article dt {
     font-weight: bold;
 }
