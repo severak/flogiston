@@ -98,3 +98,12 @@
     font-weight: bold;
 }
 
+.flogiston-author
+{
+    font-variant: small-caps;
+}
+
+.flogiston-date
+{
+    font-variant-numeric: oldstyle-nums;
+}
