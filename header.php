@@ -1,16 +1,14 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title><?php echo page_title('Nenalezeno'); ?> - <?php echo site_name(); ?></title>
+	<title><?php echo page_title(flogiston_translate('not found')); ?> - <?php echo site_name(); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="<?php echo theme_url('/css/flogiston.min.css'); ?>">
-	<meta property="og:title" content="<?php echo site_name(); ?>" />
-	<meta property="og:image" content="<?php echo theme_url('/css/background-02.jpg'); ?>" />
+	<meta property="og:title" content="<?php echo page_title(flogiston_translate('not found')); ?> - <?php echo site_name(); ?>" />
+	<meta property="og:image" content="<?php echo flogiston_server_uri() . theme_url('/css/background02.jpg'); ?>" />
 	<meta property="og:type" content="website" />
-	<meta property="og:description" content="<?php echo site_description(); ?>" />
-	<!--[if IE]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<![endif]-->
+	<meta property="og:description" content="<?php echo e(article_description() ? article_description() : site_description()); ?>" />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo rss_url(); ?>">
 </head>
 <body class="flogiston-background">
 <div class="flogiston-page">

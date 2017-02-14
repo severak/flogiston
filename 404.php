@@ -2,9 +2,13 @@
 
 <div class="flogiston-article">
 
-		<h1>Nenalezeno</h1>
-
-		<p>Stránka nenalezena, prosím, vraťte se na <a href="<?php echo base_url(); ?>">začátek</a>.</p>
+		<h1><?php echo flogiston_translate('not found'); ?></h1>
+		<p><?php
+			echo flogiston_translate('back home', array(
+				'{' => '<a href="' . base_url() . '">',
+				'}' => '</a>'
+			));
+		?></p>
 
 </div>
 

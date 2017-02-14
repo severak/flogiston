@@ -1,68 +1,43 @@
 <?php
+function flogiston_translations(){
 
-/*
-	Custom theme functions
+// english
+$T['en']['date format'] = 'F j, Y H:i:s';
+$T['en']['not found'] = 'Not found';
+$T['en']['back home'] = 'Page not found. Please, return to the {homepage}.';
+$T['en']['read more'] = 'read more »';
+$T['en']['newer posts'] = 'newer';
+$T['en']['older posts'] = 'older';
+$T['en']['prev article'] = '« previous article';
+$T['en']['next article'] = 'next article »';
+$T['en']['blog empty'] = 'There are no articles yet.';
 
-	Note: we recommend you prefix all your functions to avoid any naming
-	collisions or wrap your functions with if function_exists braces.
-*/
-function numeral($number) {
-	$test = abs($number) % 10;
-	$ext = ((abs($number) % 100 < 21 and abs($number) % 100 > 4) ? 'th' : (($test < 4) ? ($test < 3) ? ($test < 2) ? ($test < 1) ? 'th' : 'st' : 'nd' : 'rd' : 'th'));
-	return $number . $ext;
+// czech
+$T['cs']['date format'] = 'j.n.Y H:i:s';
+$T['cs']['not found'] = 'Nenalezeno';
+$T['cs']['back home'] = 'Stránka nenalezena. Prosím, vraťte se na {začátek}.';
+$T['cs']['read more'] = 'celý článek »';
+$T['cs']['newer posts'] = 'novější články';
+$T['cs']['older posts'] = 'starší články';
+$T['cs']['prev article'] = '« předchozí článek';
+$T['cs']['next article'] = 'následující článek »';
+$T['cs']['blog empty'] = 'Zatím nebyly napsány žádné články.';
+
+	$currentLang = site_meta('flogiston_locale', 'en');
+	return isset($T[$currentLang]) ? $T[$currentLang] : $T['en'];
 }
 
-function count_words($str) {
-	return count(preg_split('/\s+/', strip_tags($str), null, PREG_SPLIT_NO_EMPTY));
-}
-
-function pluralise($amount, $str, $alt = '') {
-	return intval($amount) === 1 ? $str : $str . ($alt !== '' ? $alt : 's');
-}
-
-function relative_time($date) {
-	if(is_numeric($date)) $date = '@' . $date;
-
-	$user_timezone = new DateTimeZone(Config::app('timezone'));
-	$date = new DateTime($date, $user_timezone);
-
-	// get current date in user timezone
-	$now = new DateTime('now', $user_timezone);
-
-	$elapsed = $now->format('U') - $date->format('U');
-
-	if($elapsed <= 1) {
-		return 'Just now';
+function flogiston_translate($key, $replace=array())
+{
+	$translations = flogiston_translations();
+	if (!isset($translations[$key])) {
+		throw new Exception('Translation of "' . $key  . '" not found.');
 	}
-
-	$times = array(
-		31104000 => 'year',
-		2592000 => 'month',
-		604800 => 'week',
-		86400 => 'day',
-		3600 => 'hour',
-		60 => 'minute',
-		1 => 'second'
-	);
-
-	foreach($times as $seconds => $title) {
-		$rounded = $elapsed / $seconds;
-
-		if($rounded > 1) {
-			$rounded = round($rounded);
-			return $rounded . ' ' . pluralise($rounded, $title) . ' ago';
-		}
-	}
+	return str_replace(array_keys($replace), array_values($replace), $translations[$key]);
 }
 
-function twitter_account() {
-	return site_meta('twitter', 'idiot');
-}
-
-function twitter_url() {
-	return 'https://twitter.com/' . twitter_account();
-}
-
-function total_articles() {
-	return Post::where(Base::table('posts.status'), '=', 'published')->count();
+function flogiston_server_uri()
+{
+	$s = !empty($_SERVER['HTTPS']) ? 's' : '';
+	return 'http'.$s.'://' . $_SERVER['HTTP_HOST'];
 }
