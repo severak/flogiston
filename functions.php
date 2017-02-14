@@ -11,6 +11,8 @@ $T['en']['older posts'] = 'older';
 $T['en']['prev article'] = '« previous article';
 $T['en']['next article'] = 'next article »';
 $T['en']['blog empty'] = 'There are no articles yet.';
+$T['en']['article category'] = 'Enlisted in {category} category.';
+$T['en']['category name'] = 'category: {category}';
 
 // czech
 $T['cs']['date format'] = 'j.n.Y H:i:s';
@@ -22,6 +24,8 @@ $T['cs']['older posts'] = 'starší články';
 $T['cs']['prev article'] = '« předchozí článek';
 $T['cs']['next article'] = 'následující článek »';
 $T['cs']['blog empty'] = 'Zatím nebyly napsány žádné články.';
+$T['cs']['article category'] = 'Zařazeno do kategorie {category}.';
+$T['cs']['category name'] = 'kategorie: {category}';
 
 	$currentLang = site_meta('flogiston_locale', 'en');
 	return isset($T[$currentLang]) ? $T[$currentLang] : $T['en'];
@@ -40,4 +44,19 @@ function flogiston_server_uri()
 {
 	$s = !empty($_SERVER['HTTPS']) ? 's' : '';
 	return 'http'.$s.'://' . $_SERVER['HTTP_HOST'];
+}
+
+function flogiston_category_name()
+{
+	return Registry::prop('post_category', 'title');
+}
+
+function flogiston_category_description()
+{
+	return Registry::prop('post_category', 'description');
+}
+
+function flogiston_category_url()
+{
+	return base_url('category/' . Registry::prop('post_category', 'slug'));
 }

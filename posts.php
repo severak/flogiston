@@ -7,6 +7,20 @@
 		echo '<div class="flogiston-padding">▲ ' . posts_next(flogiston_translate('newer posts'))  .' ▲</div>';
 	}
 
+	if (flogiston_category_name()):
+	?>
+	<div class="flogiston-article">
+
+	<h1>
+		<a href="<?php echo flogiston_category_url(); ?>" title="<?php echo flogiston_category_name(); ?>"><?php echo flogiston_translate('category name', array('{category}'=>flogiston_category_name())); ?></a>
+	</h1>
+
+	<?php echo flogiston_category_description(); ?>
+	</div>
+	<hr class="flogiston-article-separator">
+	<?php
+	endif;
+
 	while(posts()): ?>
 	<div class="flogiston-article">
 

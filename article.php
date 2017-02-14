@@ -9,6 +9,13 @@
 	<p><span class="flogiston-author"><?php echo article_author(); ?></span> <span class="flogiston-date"><?php echo date(flogiston_translate('date format'), article_time());?></span></p>
 
 	<?php echo article_markdown(); ?>
+
+	<?php
+	if (article_category_id()!=1) {
+		$categoryLink = '<a href="' . article_category_url() . '">' . article_category() . '</a>';
+		echo '<p>'.flogiston_translate('article category', array('{category}'=>$categoryLink)).'</p>';
+	}
+	?>
 	</div>
 	
 </article>
