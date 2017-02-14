@@ -16,10 +16,6 @@ a img  {
     *background-color: #fdf6e3; /* IE neumí průhlednost */
 }
 
-.flogiston-background {
-    background: url("background02.jpg") no-repeat fixed center/cover;
-}
-
 .flogiston-inverted {
     background-color: #002b36;
     color: #fdf6e3;
@@ -80,6 +76,10 @@ h6 {font-size: 1em;}
 .flogiston-article p code
 {
     border-color: #2aa198;
+}
+
+.flogiston-article-next {
+    text-align: right;
 }
 
 /*
