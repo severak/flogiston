@@ -1,5 +1,9 @@
-<hr>
-<endora/>
+<?php if (site_meta('flogiston_footer', '')!='') { ?>
+<div class="flogiston-footer flogiston-inverted flogiston-padding">
+<?php echo site_meta('flogiston_footer', ''); ?>
+</div>
+<?php } ?>
+
 </div>
 </div>
 
