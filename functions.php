@@ -31,6 +31,11 @@ $T['cs']['category name'] = 'kategorie: {category}';
 	return isset($T[$currentLang]) ? $T[$currentLang] : $T['en'];
 }
 
+function flogiston_background()
+{
+	return theme_url('backgrounds/' . site_meta('flogiston_background', 'foggy.jpg'));
+}
+
 function flogiston_translate($key, $replace=array())
 {
 	$translations = flogiston_translations();
