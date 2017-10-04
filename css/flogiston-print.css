@@ -16,7 +16,8 @@ body {
     /* font-family: Garamond,"Times New Roman", serif; */
     color: #000;
     background: none;
-    font-size: 14pt; }
+    font-size: 10pt; 
+}
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 { page-break-after:avoid; }
@@ -29,7 +30,7 @@ h4,h5,h6{font-size:14pt;}
 p, h2, h3 { orphans: 3; widows: 3; }
 
 code { font: 12pt Courier, monospace; }
-blockquote { margin: 1.2em; padding: 1em;  font-size: 12pt; }
+blockquote { margin: 1.2em; padding: 1em;  font-size: 10pt; }
 hr { background-color: #ccc; }
 
 /* Images */
